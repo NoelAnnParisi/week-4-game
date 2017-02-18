@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Crystal Ball</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+</head>
+
+
+<body>
+	<div class="gameTitle">
+		<h1>Crystal Collector!</h1>
+	</div>
+
+	<div class="gameInstructions">
+		<p>
+			Welcome to the crystal game! Below you should see 4 crystals. By clicking on a crystal you will add a specified amount of ponts to your total score. 
+
+			You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+
+			The value of each crystal is hidden until you click on it. Each time the game starts the values of the crystal will change. 
+		</p>
+	</div>
+
+	<div class="randomNumber" id="randomNumber">
+	</div>
+
+	<div id="gameStats wins lose">
+	</div>
+
+	<div class="crystals">
+
+		<div id="crystal1">
+			<img src="assets/images/crystal1.png" alt= "crystal1">
+		</div>
+		
+		<div id="crystal2">
+			<img src="assets/images/crystal2.png" alt= "crystal2">
+		</div>
+
+		<div id="crystal3">
+			<img src="assets/images/crystal3.png" alt= "crystal3">
+		</div>
+
+		<div id="crystal4">
+			<img src="assets/images/crystal4.png" alt= "crystal4">
+		</div>
+
+	</div>
+
+	<div class="yourScoreBox">
+		<p>Your total score is:</p>
+	</div>
+
+	<div>
+		<p class="score"></p>
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>

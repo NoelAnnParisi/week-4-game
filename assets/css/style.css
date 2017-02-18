@@ -1,0 +1,76 @@
+body {
+	background-image: url("../images/galaxy.png");
+}
+
+
+h1 {
+
+	font-family: 'Cabin Sketch', cursive;
+	text-align: center;
+	color:white;
+	font-size:5vw;
+}
+
+p {
+	
+	font-family: 'Cabin Sketch', cursive;
+	color:white;
+	font-size: 2vw;
+	margin: 5%;
+	margin-left: 2%;
+
+}
+
+img {
+
+	height: 14vh;
+	width: 7vw;
+
+}
+
+.yourScoreBox > p {
+
+	color: white;
+	margin: 0;
+	margin-top: 2%;
+
+}
+
+
+.gameTitle {
+
+	/*background-color: deepskyblue;*/
+	margin-top: 3%;
+
+}
+
+.gameInstructions {
+	
+	text-align: justify;
+
+}
+
+.randomNumber {
+
+	display: inline-block;	
+}
+
+
+.gameStats {
+
+	display: inline-block;
+}
+
+.crystals {
+
+	display: inline-flex;
+	margin-left: 2%;
+
+}
+
+
+.yourScoreBox {
+	
+	margin-left: 2%;
+
+}
