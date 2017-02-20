@@ -65,6 +65,8 @@ img {
 
 	display: inline-flex;
 	margin-left: 2%;
+	margin-bottom: 4%;
+    margin-top: 4%;
 
 }
 
@@ -74,3 +76,38 @@ img {
 	margin-left: 2%;
 
 }
+
+.winningNumber {
+
+	font-family: 'Cabin Sketch', cursive;
+	color:white;
+	font-size: 2vw;
+	margin-top: 0;
+	margin-left: 2%;	
+
+
+}
+
+#randomNumber, #win, #lose {
+
+	font-family: 'Cabin Sketch', cursive;
+	color:white;
+	font-size: 2vw;
+	margin-top: 0;
+	margin-left: 2%;
+
+}
+
+.score {
+
+	margin-top: 0;
+	font-family: 'Cabin Sketch', cursive;
+	color:white;
+	font-size: 2vw;
+	margin-top: 0;
+	margin-left: 2%;
+
+}
+
+
+

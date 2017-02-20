@@ -1,5 +1,4 @@
-//set variables and initilize functions 
-var statusOfGame, addNumber, wins=0, lose=0, score=0, gameStats, crystalNumber, winningNumber 
+var statusOfGame = true, winnah, wins=0, lose=0, totalScore=0, addingPoints, winningNumber
 
 var crystals = {
 	crystal1 : $("#crystal1"),
@@ -9,89 +8,104 @@ var crystals = {
 };
 
 console.log(crystals);
-//use an asynch approach and in the end it might be easier
 //statusOfGame is true when points do not equal (in progress)
-//statusOfGame is false when points equal has been guessed (completed)
-//function generate random number 
-	//four each crystal and again at the start of each game
-var randomNumber = function randomNumber() {
+//statusOfGame is false when points equal has been guessed (completed) or they lose the game
 
-	for(let prop in crystals) {
+//generate random number for each crystal 
+	var randomNumber = function randomNumber() {
 
-		crystals[prop] = Math.floor((Math.random() * 12) + 1);
-		console.log(crystals[prop]);
-		// crystals.push(crystalNumber);
-		console.log(crystals);
-		//console.log(crystalNumber);
+		statusOfGame = true;
 
+		for(let prop in crystals) {
 
+			crystals[prop] = Math.floor((Math.random() * 12) + 1);
+			console.log(typeof crystals[prop]);
+			console.log(crystals);
+		};
+
+		//generate and add winning number to html 
+		winningNumber = Math.floor((Math.random() * 120) + 19);
+		console.log(winningNumber);
+		$("#randomNumber").html(winningNumber);
+		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber)
 	};
 
-	// addNumber
-	winningNumber = Math.floor((Math.random() * 120) + 19);
-	console.log(winningNumber);
 
-};
+// $(".crystals").on("click", function() {
+// 	console.log("What is happening?")
+// 	console.log(totalScore);
+//when the crystals are clicked add their value to the variable totalScore and display
+		//add the value of each crystal to a total score
+var addingPoints = function addingPoints (){
 
-//function for clicking on the crystals. 
-	//depending on which crystal the number associated with it should add to the score
-var clickOnCrystals = function clickOnCrystals () {
-
-	if ($("#crystal1").on("click", randomNumber)) {
-		//I only what thecrystal number not the winning number 
-	}
-
-};
-//function to check points to total points
-	// if it equals it increment wins
-	// else increment lose
-var checkGameStatus = function checkGameStatus() {
-
-
-//function to add the crysyals points to the winning number 
-	$("#crystal1").click(function() {
-	  // var addedNumber = $("#crystal1").html();
-	  	score = $(".score");
-		score.text(crystals.crystal1);
-		console.log("Is this working?");
-		console.log(crystals.crystal1);
-
+	$("#crystal1").on("click", function() {
+	//display the total score
+		totalScore += crystals.crystal1;
+		console.log("the total score is : " + totalScore);
+		$(".score").html(totalScore);
+		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
+		console.log("number of wins " + wins +" number of loses: " + lose);
 	});
 
-	$("#crystal2").click(function() {
-	  // var addedNumber = $("#crystal1").html();
-	  	score = $(".score");
-		score.text(crystals.crystal2);
-		console.log("Is this working?");
-		console.log(crystals.crystal2);
-
+	$("#crystal2").on("click", function() {
+	//display the total score
+		totalScore += crystals.crystal2;
+		console.log("the total score is : " + totalScore);
+		$(".score").html(totalScore);
+		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
+		console.log("number of wins " + wins +" number of loses: " + lose);
 	});
 
-	$("#crystal3").click(function() {
-	  // var addedNumber = $("#crystal1").html();
-	  	score = $(".score");
-		score.text(crystals.crystal3);
-		console.log("Is this working?");
-		console.log(crystals.crystal3);
-
+	$("#crystal3").on("click", function() {
+	//display the total score
+		totalScore += crystals.crystal3;
+		console.log("the total score is : " + totalScore);
+		$(".score").html(totalScore);
+		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
+		console.log("number of wins " + wins +" number of loses: " + lose);
 	});
 
-	$("#crystal4").click(function() {
-	  // var addedNumber = $("#crystal1").html();
-	  	score = $(".score");
-		score.text(crystals.crystal4);
-		console.log("Is this working?");
-		console.log(crystals.crystal4);
-
+	$("#crystal4").on("click", function() {
+	//display the total score
+		totalScore += crystals.crystal4;
+		console.log("the total score is : " + totalScore);
+		$(".score").html(totalScore);
+		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
+		console.log("number of wins " + wins +" number of loses: " + lose);
 	});
 
-}
-//function to replace html elements
-	//totalscore , wins, lose, random number
-var htmlReplacer = function htmlReplacer () {
-
-}
+};	
 
 //function to "restart" the game when the win has been incremented
-randomNumber();
-checkGameStatus();
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+if (statusOfGame = true) {
+	randomNumber();
+	addingPoints();
+
+	if (winningNumber === totalScore) {
+		console.log("Is this running?")
+		wins += 1;
+		$("#wins").html("You've won this many times: " + wins);
+		statusOfGame = false;
+
+	}
+
+	if (totalScore > winningNumber) {
+		
+		lose += 1;
+	 	$("#lose").html("You've lost this many times: " + lose);
+	 	statusOfGame = false;
+	}
+}
+// } else {
+
+// 	//restart the game
+// }
+
+
+
+
+
+
