@@ -88,7 +88,7 @@ img {
 
 }
 
-#randomNumber, #win, #lose {
+#randomNumber, #wins, #lose {
 
 	font-family: 'Cabin Sketch', cursive;
 	color:white;
@@ -107,7 +107,4 @@ img {
 	margin-top: 0;
 	margin-left: 2%;
 
-}
-
-
-
+} 
