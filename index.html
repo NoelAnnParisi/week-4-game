@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
 
 </head>
 
@@ -17,11 +18,11 @@
 
 	<div class="gameInstructions">
 		<p>
-			Welcome to the crystal game! Below you should see 4 crystals. By clicking on a crystal you will add a specified amount of ponts to your total score. 
+			Below you see 4 crystals. The value of each crystal is hidden until you click on it. When you click on them you'll add that many points to your number. 
 
-			You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+			The goal is to match your number with the winning number. You lose the game if your number goes above the winning number.
 
-			The value of each crystal is hidden until you click on it. Each time the game starts the values of the crystal will change. 
+			The values of each crystal will change afetr each round.
 		</p>
 	</div>
 	
@@ -29,10 +30,11 @@
 	<div class="winningNumber">The winning number is:</div>
 	<div class="randomNumber" id="randomNumber">
 	</div>
-	<div>
+
+	<div class="crystalContainer">
 
 		<div class="crystals" id="crystal1">
-			<img src="assets/images/crystal1.png" alt= "crystal1">
+			<img src="assets/images/crystal2.png" alt= "crystal1">
 		</div>
 		
 		<div class="crystals" id="crystal2">
@@ -40,26 +42,22 @@
 		</div>
 
 		<div class="crystals" id="crystal3">
-			<img src="assets/images/crystal3.png" alt= "crystal3">
+			<img src="assets/images/crystal2.png" alt= "crystal3">
 		</div>
 
 		<div class="crystals" id="crystal4">
-			<img src="assets/images/crystal4.png" alt= "crystal4">
+			<img src="assets/images/crystal2.png" alt= "crystal4">
 		</div>
 
 	</div>
 
 	<div class="yourScoreBox">
-		<p>Your total score is:</p>
+		<p>Your number is:</p>
+		<div class="score"></div>
 	</div>
 	<div>
 		<div id="wins"></div>
 		<div id="lose"></div>
-	</div>
-
-
-	<div class="score">
-		
 	</div>
 
 

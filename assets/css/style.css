@@ -1,19 +1,26 @@
 body {
-	background-image: url("../images/galaxy.png");
+
+	background: linear-gradient(black, silver, lightpink);
+	min-height:100vh;
+	min-width:100vw;
+
 }
 
 
 h1 {
 
-	font-family: 'Cabin Sketch', cursive;
+	font-family: 'Amatic SC', cursive;
+	/*background: linear-gradient(silver,black);*/
 	text-align: center;
 	color:white;
+    text-shadow: 0 0 25px magenta, 0 0 20px magenta;
+    /*text-shadow:5px 5px 15px magenta;*/
 	font-size:5vw;
 }
 
 p {
 	
-	font-family: 'Cabin Sketch', cursive;
+	font-family: 'Amatic SC', cursive;
 	color:white;
 	font-size: 2vw;
 	margin: 5%;
@@ -25,7 +32,13 @@ img {
 
 	height: 14vh;
 	width: 7vw;
+	opacity: 0.5;
 
+}
+
+img:hover {
+    opacity: 1.0;
+    transform: rotate(180deg);
 }
 
 .yourScoreBox > p {
@@ -34,6 +47,16 @@ img {
 	margin: 0;
 	margin-top: 2%;
 
+}
+
+.crystalContainer {
+
+	box-shadow: 10px 10px 5px grey;
+	border:1px solid gray;
+    width: 33%;
+    padding: 1%;
+    margin: 3%;
+    margin-left: 33%;
 }
 
 
@@ -47,6 +70,8 @@ img {
 .gameInstructions {
 	
 	text-align: justify;
+	width: 56%;
+    margin-left: 23%;
 
 }
 
@@ -73,38 +98,49 @@ img {
 
 .yourScoreBox {
 	
-	margin-left: 2%;
+	margin-left: 24%;
 
 }
 
 .winningNumber {
 
-	font-family: 'Cabin Sketch', cursive;
+	font-family: 'Amatic SC', cursive;
 	color:white;
+	margin-left: 24%;
 	font-size: 2vw;
 	margin-top: 0;
-	margin-left: 2%;	
+	margin-left: 24%;
 
 
 }
 
 #randomNumber, #wins, #lose {
 
-	font-family: 'Cabin Sketch', cursive;
+	font-family: 'Amatic SC', cursive;
+	text-shadow: 1px 1px 2px white, 0 0 25px purple, 0 0 5px magenta;
 	color:white;
 	font-size: 2vw;
 	margin-top: 0;
-	margin-left: 2%;
+	margin-left: 24%;
+	margin-bottom: 1%;
+
+}
+
+#randomNumber {
+
+	text-shadow: 1px 1px 2px white, 0 0 25px purple, 0 0 5px magenta;
+	margin-top: 1%;
 
 }
 
 .score {
 
-	margin-top: 0;
-	font-family: 'Cabin Sketch', cursive;
 	color:white;
+	font-family: 'Amatic SC', cursive;
+	text-shadow: 1px 1px 2px white, 0 0 25px purple, 0 0 5px magenta;
 	font-size: 2vw;
-	margin-top: 0;
-	margin-left: 2%;
+	margin-top: 1%;
+	margin-bottom: 1%
+
 
 } 
