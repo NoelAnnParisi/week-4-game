@@ -1,4 +1,7 @@
 var statusOfGame = true, wins=0, lose=0, totalScore=0, winningNumber
+var crystalClickSound = new Audio('assets/audio/crystalClick.wav');
+var loserSound = new Audio('assets/audio/loser.wav');
+var winningSound = new Audio('assets/audio/winning.wav');
 
 //statusOfGame is true when points do not equal (in progress)
 //statusOfGame is false when points equal has been guessed (completed) or they lose the game
@@ -31,46 +34,25 @@ var randomNumber = function randomNumber() {
 
 var winnah = function winnah() {
 
+	winningSound.play();
 	wins += 1;
 	$("#wins").html("You've won this many times: " + wins);
 	statusOfGame = false;
-	confirm("YOU'VE WON!! Do you want to play again?");
-		if (true) {
-			restartGame();
-		} else {
-
- 			alert("Bye Felicia!");
-
- 		}
+	$("#playAgain").html("<button type='button'>Restart?</button>");
+	console.log("the winner function is running");
 
 }
 
 var loser = function loser() {
 
+	loserSound.play();
 	lose += 1;
  	$("#lose").html("You've lost this many times: " + lose);
  	statusOfGame = false;
  	var numberOff = totalScore - winningNumber;
+ 	$("#playAgain").html("<button type='button'>Restart?</button>");
+ 	console.log("the loser function is running.");
 
- 	confirm("Looks like you over guessed by " + numberOff + " points. Do you want to play again?");
- 		if (true) {
- 			restartGame();
- 		} else {
-
- 			alert("Bye Felicia!");
-
- 		}
-
-}
-
-var restartGame = function restartGame() {
-
-	$("#randomNumber").empty();
-	$(".score").empty();
-	totalScore = 0;
-	randomNumber();
-	console.log('i am resetting' + totalScore)
-	console.log(crystals);
 
 }
 
@@ -79,17 +61,17 @@ var addingPoints = function addingPoints() {
 	$("#crystal1").on("click", function() {
 		totalScore += crystals.crystal1;
 		$(".score").html(totalScore);
-		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
-		console.log("number of wins " + wins +" number of loses: " + lose);
+		crystalClickSound.play();
 
 		if (winningNumber === totalScore) {
-
 			winnah();
+			console.log("this should call the winnah function");
 		} 
 
 		if (totalScore > winningNumber) {
 
 			loser();
+			console.log("this should call the loser function");
 		}
 	});
 
@@ -97,17 +79,17 @@ var addingPoints = function addingPoints() {
 	$("#crystal2").on("click", function() {
 		totalScore += crystals.crystal2;
 		$(".score").html(totalScore);
-		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
-		console.log("number of wins " + wins +" number of loses: " + lose);
+		crystalClickSound.play();
 
 		if (winningNumber === totalScore) {
-
+			console.log("this should call the winnah function");
 			winnah();
 		}
 
 		if (totalScore > winningNumber) {
 
 			loser();
+			console.log("this should call the loser function");
 		}
 
 	});
@@ -116,17 +98,17 @@ var addingPoints = function addingPoints() {
 	$("#crystal3").on("click", function() {
 		totalScore += crystals.crystal3;
 		$(".score").html(totalScore);
-		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
-		console.log("number of wins " + wins +" number of loses: " + lose);
+		crystalClickSound.play();
 
 		if (winningNumber === totalScore) {
-
+			console.log("this should call the winnah function");
 			winnah();
 		}
 
 		if (totalScore > winningNumber) {
 
 			loser();
+			console.log("this should call the loser function");
 		}
 	});
 
@@ -134,30 +116,37 @@ var addingPoints = function addingPoints() {
 	$("#crystal4").on("click", function() {
 		totalScore += crystals.crystal4;
 		$(".score").html(totalScore);
-		console.log("The total score is: " + totalScore + "the winning number is " + winningNumber);
-		console.log("number of wins " + wins +" number of loses: " + lose);
+		crystalClickSound.play();
 
 		if (winningNumber === totalScore) {
-
+			console.log("this should call the winnah function");
 			winnah();
 		}
 
 		if (totalScore > winningNumber) {
 
 			loser();
+			console.log("this should call the loser function");
 		}
 	});
 
-
-
 };	
 
-
-//need function to "restart" the game when the win has been incremented
-/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 if (statusOfGame = true) {
 
 	randomNumber();
 	addingPoints();
 }
+
+////////////////////////////////////////////////////////////////////////////////////////
+$("#playAgain").on("click", function(){
+
+	$("#randomNumber").empty();
+	$(".score").empty();
+	totalScore = 0;
+	randomNumber();
+	console.log("the restartGame function is running");
+
+});
 
