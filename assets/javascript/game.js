@@ -1,7 +1,16 @@
-var statusOfGame = true, wins=0, lose=0, totalScore=0, winningNumber
+var statusOfGame = true, wins=0, lose=0, totalScore=0, winningNumber;
 var crystalClickSound = new Audio('assets/audio/crystalClick.wav');
+var otherClickSound = new Audio('assets/audio/otherClickSound.wav');
 var loserSound = new Audio('assets/audio/loser.wav');
 var winningSound = new Audio('assets/audio/winning.wav');
+var restartSound = new Audio('assets/audio/restart.wav');
+
+crystalClickSound.volume = 0.7;
+otherClickSound.volume = 0.7;
+loserSound.volume = 0.8;
+winningSound.volume = 0.8;
+restartSound.volume = 0.8;
+
 
 //statusOfGame is true when points do not equal (in progress)
 //statusOfGame is false when points equal has been guessed (completed) or they lose the game
@@ -79,7 +88,7 @@ var addingPoints = function addingPoints() {
 	$("#crystal2").on("click", function() {
 		totalScore += crystals.crystal2;
 		$(".score").html(totalScore);
-		crystalClickSound.play();
+		otherClickSound.play();
 
 		if (winningNumber === totalScore) {
 			console.log("this should call the winnah function");
@@ -116,7 +125,7 @@ var addingPoints = function addingPoints() {
 	$("#crystal4").on("click", function() {
 		totalScore += crystals.crystal4;
 		$(".score").html(totalScore);
-		crystalClickSound.play();
+		otherClickSound.play();
 
 		if (winningNumber === totalScore) {
 			console.log("this should call the winnah function");
@@ -142,6 +151,7 @@ if (statusOfGame = true) {
 ////////////////////////////////////////////////////////////////////////////////////////
 $("#playAgain").on("click", function(){
 
+	restartSound.play();
 	$("#randomNumber").empty();
 	$(".score").empty();
 	totalScore = 0;
