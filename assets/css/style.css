@@ -32,11 +32,13 @@ img:hover {
 }
 
 button {
-    font-size: 3em;
+    font-size: 2em;
+    padding: 0 1%;
     margin-left: 24%;
     margin-bottom: 2%;
     font-family: 'Amatic SC', cursive;
     color: white;
+    background: black;
     animation-name: spin;
     animation-duration: 1000ms;
     animation-iteration-count: 1000ms;
