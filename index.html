@@ -1,70 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>My Crystal Ball</title>
-	<meta charset="utf-8">
-	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <title>My Crystal Ball</title>
+    <meta charset="utf-8">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 
-
 <body>
-	<div class="gameTitle">
-		<h1>Crystal Collector!</h1>
-	</div>
-
-	<div class="gameInstructions">
-		<p>
-			Below you see 4 crystals. The value of each crystal is hidden until you click on it. When you click on them you'll add that many points to your number. 
-
-			The goal is to match your number with the winning number. You lose the game if your number goes above the winning number.
-
-			The values of each crystal will change afetr each round.
-		</p>
-	</div>
-	
-
-	<div class="winningNumber">The winning number is:</div>
-	<div class="randomNumber" id="randomNumber">
-	</div>
-
-	<div class="crystalContainer">
-
-		<div class="crystals" id="crystal1">
-			<img src="assets/images/crystal2.png" alt= "crystal1">
-		</div>
-		
-		<div class="crystals" id="crystal2">
-			<img src="assets/images/crystal2.png" alt= "crystal2">
-		</div>
-
-		<div class="crystals" id="crystal3">
-			<img src="assets/images/crystal2.png" alt= "crystal3">
-		</div>
-
-		<div class="crystals" id="crystal4">
-			<img src="assets/images/crystal2.png" alt= "crystal4">
-		</div>
-
-	</div>
-
-	<div class="yourScoreBox">
-		<p>Your number is:</p>
-		<div class="score"></div>
-	</div>
-	<div>
-		<div id="wins"></div>
-		<div id="lose"></div>
-	</div>
-
-	<div id="playAgain">
-		
-	</div>
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/javascript/game.js"></script>
+    <div class="gameTitle">
+        <h1>Crystal Collector!</h1>
+    </div>
+    <div class="gameInstructions">
+        <p>
+            Below you see 4 crystals. The value of each crystal is hidden until you click on it. When you click on them you'll add that many points to your number. The goal is to match your number with the winning number. You lose the game if your number goes above the winning number. The values of each crystal will change afetr each round.
+        </p>
+    </div>
+    <div class="winningNumber">The winning number is:</div>
+    <div class="randomNumber" id="randomNumber">
+    </div>
+    <div class="crystalContainer">
+        <div class="crystals" id="crystal1">
+            <img src="assets/images/crystal2.png" alt="crystal1">
+        </div>
+        <div class="crystals" id="crystal2">
+            <img src="assets/images/crystal2.png" alt="crystal2">
+        </div>
+        <div class="crystals" id="crystal3">
+            <img src="assets/images/crystal2.png" alt="crystal3">
+        </div>
+        <div class="crystals" id="crystal4">
+            <img src="assets/images/crystal2.png" alt="crystal4">
+        </div>
+    </div>
+    <div class="yourScoreBox">
+        <p>Your number is:</p>
+        <div class="score"></div>
+    </div>
+    <div>
+        <div id="wins"></div>
+        <div id="lose"></div>
+    </div>
+    <div id="playAgain">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>
