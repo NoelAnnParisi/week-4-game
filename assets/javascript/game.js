@@ -9,17 +9,12 @@ var loserSound = new Audio('assets/audio/loser.wav');
 var winningSound = new Audio('assets/audio/winning.wav');
 var restartSound = new Audio('assets/audio/restart.wav');
 
-
-//statusOfGame is true when points do not equal (in progress)
-//statusOfGame is false when points equal has been guessed (completed) or they lose the game
-
 var crystals = {
     crystal1: $("#crystal1"),
     crystal2: $("#crystal2"),
     crystal3: $("#crystal3"),
     crystal4: $("#crystal4")
 }
-
 
 var randomNumber = function randomNumber() {
 
